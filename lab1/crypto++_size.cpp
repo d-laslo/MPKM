@@ -20,8 +20,6 @@ int main()
         // генерування ключів
         privateKey.GenerateRandomWithKeySize(rng, CRYPTO_RSA_KEY_LEN);
         publicKey.Initialize(privateKey.GetModulus(), privateKey.GetPublicExponent());
-        std::cout << privateKey.GetPublicExponent() << std::endl;
-
 
         // шифрування
         c = publicKey.ApplyFunction(m);
